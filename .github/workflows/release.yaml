@@ -1,0 +1,25 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Building zip file
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Zip the mod up
+      - run: zip -r FS25_MKB-4TR-SE-${{ github.ref_name }}.zip ./*
+      - name: upload artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./FS25_MKB-4TR-SE-${{ github.ref_name }}.zip
+          asset_content_type: application/zip
