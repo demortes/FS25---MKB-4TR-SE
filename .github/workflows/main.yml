@@ -1,0 +1,22 @@
+name: Zip FS25 Mod
+run-name: ${{ github.actor}} is archiving the mod.
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  archive_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: zip ./* FS25_MKB-4TR-SE.zip
+      - name: Upload Binaries to Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: FS25_MKB-4TR-SE.zip
+          asset_name: FS25-MKB-4TR-SE.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+  
