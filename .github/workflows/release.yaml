@@ -13,8 +13,10 @@ jobs:
     name: Building zip file
     runs-on: ubuntu-22.04
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Zip the mod up
-      - run: zip -r FS25_MKB-4TR-SE-${{ github.ref_name }}.zip ./*
+        run: zip -r FS25_MKB-4TR-SE-${{ github.ref_name }}.zip ./*
       - name: upload artifact
         uses: actions/upload-release-asset@v1
         env:
