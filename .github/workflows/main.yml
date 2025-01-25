@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: zip ./* FS25_MKB-4TR-SE.zip
+      - run: zip -r FS25_MKB-4TR-SE.zip .
       - name: Upload Binaries to Release
         uses: svenstaro/upload-release-action@v2
         with:
