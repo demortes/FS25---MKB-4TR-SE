@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="90">
+<modDesc descVersion="94">
     <author>Demortes</author>
     <version>1.0.0.0</version>
     <title>
         <en>MKB-4TR-SE (Special Edition)</en>
     </title>
     <description>
-        <en>Take the original MKB-4TR and make it faster and larger capacity. The new technology does come at a price however....</en>
+        <en><![CDATA[ Take the original MKB-4TR and make it faster and larger capacity.]]></en>
+        <de><![CDATA[ Nehmen Sie den Original-MKB-4TR und machen Sie ihn schneller und mit größerer Kapazität.]]></de>
+        <fr><![CDATA[ Prenez le MKB-4TR original et rendez-le plus rapide et avec une plus grande capacité.]]></fr>
     </description>
-    <iconFilename>store_mkb4TR.dds</iconFilename>
+    <iconFilename>$data/vehicles/oxbo/mkb4TR/store_mkb4TR.dds</iconFilename>
     <storeItems>
         <storeItem rootMode="oxbo" xmlFilename="mkb4TR.xml"/>
     </storeItems>
+    <multiplayer supported="true"/>
 </modDesc>
