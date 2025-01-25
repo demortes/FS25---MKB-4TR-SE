@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="90">
+    <author>Demortes</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>MKB-4TR-SE (Special Edition)</en>
+    </title>
+    <description>
+        <en>Take the original MKB-4TR and make it faster and larger capacity. The new technology does come at a price however....</en>
+    </description>
+    <iconFilename>store_mkb4TR.dds</iconFilename>
+    <storeItems>
+        <storeItem rootMode="oxbo" xmlFilename="mkb4TR.xml"/>
+    </storeItems>
+</modDesc>
